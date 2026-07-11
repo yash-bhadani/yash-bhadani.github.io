@@ -36,10 +36,10 @@ const hireMeMailto = `mailto:${personalInfo.emails.primary}?subject=Hiring Inqui
         return (
           <a 
             href={link.href}
-            class={`font-semibold text-sm tracking-wide relative group transition-colors duration-300 ${isActive ? 'text-[#ff2a2a]' : 'text-white/80 hover:text-white'}`}
+            class={`font-semibold text-sm tracking-wide relative group transition-colors duration-300 ${isActive ? 'active-link' : 'text-white/80 hover:text-white'}`}
           >
             {link.name}
-            <span class={`absolute -bottom-1 left-0 h-0.5 bg-[#ff2a2a] transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+            <span class={`underline-bar absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${isActive ? 'w-full bg-white' : 'w-0 group-hover:w-full bg-[#ff2a2a]'}`}></span>
           </a>
         );
       })}
@@ -175,5 +175,17 @@ const hireMeMailto = `mailto:${personalInfo.emails.primary}?subject=Hiring Inqui
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #main-navbar .active-link {
+    color: #ffffff !important;
+  }
+
+  #main-navbar.scrolled .active-link {
+    color: #ff2a2a !important;
+  }
+
+  #main-navbar.scrolled .active-link .underline-bar {
+    background-color: #ff2a2a !important;
   }
 </style>
