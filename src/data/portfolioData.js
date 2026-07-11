@@ -20,7 +20,7 @@ export const personalInfo = {
 };
 
 export const socialLinks = {
-  github: "https://github.com/yash-bhadan",
+  github: "https://github.com/yash-bhadani",
   linkedin: "https://www.linkedin.com/in/yash-bhadani26",
   instagram: "https://instagram.com/yash_bhadani",
 };
